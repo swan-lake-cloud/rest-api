@@ -9,11 +9,17 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 description = 'Spring Boot Jersey Example'
 
+
+// The toolchain block below is used by Gradle to select the correct JDK for building
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
+    // These two lines help IntelliJ IDEA recognize the Java version for code analysis and running
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
+
 
 repositories {
     mavenCentral()
